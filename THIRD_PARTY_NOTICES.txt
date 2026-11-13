@@ -1,0 +1,41 @@
+Chatwell includes these Go modules. Their source code is at the URLs below (and in the Go module proxy,
+https://proxy.golang.org). Chatwell itself is GPL-3.0 (see LICENSE.txt); the source code of each version is attached
+to its release (Chatwell-<version>-source.zip). MPL-2.0 modules (whatsmeow, go.mau.fi/util) are used unmodified.
+
+filippo.io/edwards25519@v1.2.0  BSD-style  https://pkg.go.dev/filippo.io/edwards25519
+fyne.io/systray@v1.12.2  Apache-2.0  https://pkg.go.dev/fyne.io/systray
+github.com/beeper/argo-go@v1.1.2  MIT  https://pkg.go.dev/github.com/beeper/argo-go
+github.com/coder/websocket@v1.8.15  ISC  https://pkg.go.dev/github.com/coder/websocket
+github.com/dustin/go-humanize@v1.1.0  MIT  https://pkg.go.dev/github.com/dustin/go-humanize
+github.com/elliotchance/orderedmap/v3@v3.1.0  MIT  https://pkg.go.dev/github.com/elliotchance/orderedmap/v3
+github.com/godbus/dbus/v5@v5.1.0  BSD-style  https://pkg.go.dev/github.com/godbus/dbus/v5
+github.com/google/jsonschema-go@v0.4.3  MIT  https://pkg.go.dev/github.com/google/jsonschema-go
+github.com/google/uuid@v1.6.0  BSD-style  https://pkg.go.dev/github.com/google/uuid
+github.com/mattn/go-colorable@v0.1.14  MIT  https://pkg.go.dev/github.com/mattn/go-colorable
+github.com/mattn/go-isatty@v0.0.24  MIT  https://pkg.go.dev/github.com/mattn/go-isatty
+github.com/modelcontextprotocol/go-sdk@v1.8.0  MIT  https://pkg.go.dev/github.com/modelcontextprotocol/go-sdk
+github.com/ncruces/go-strftime@v1.1.0  MIT  https://pkg.go.dev/github.com/ncruces/go-strftime
+github.com/petermattis/goid@v0.0.0-20260918085751-abfca077860b  Apache-2.0  https://pkg.go.dev/github.com/petermattis/goid
+github.com/remyoudompheng/bigfft@v0.0.0-20230129092748-24d4a6f8daec  BSD-style  https://pkg.go.dev/github.com/remyoudompheng/bigfft
+github.com/rs/zerolog@v1.35.1  MIT  https://pkg.go.dev/github.com/rs/zerolog
+github.com/segmentio/asm@v1.1.3  MIT  https://pkg.go.dev/github.com/segmentio/asm
+github.com/segmentio/encoding@v0.5.4  MIT  https://pkg.go.dev/github.com/segmentio/encoding
+github.com/skip2/go-qrcode@v0.0.0-20200617195104-da1b6568686e  MIT  https://pkg.go.dev/github.com/skip2/go-qrcode
+github.com/vektah/gqlparser/v2@v2.5.27  MIT  https://pkg.go.dev/github.com/vektah/gqlparser/v2
+github.com/yosida95/uritemplate/v3@v3.0.2  BSD-style  https://pkg.go.dev/github.com/yosida95/uritemplate/v3
+go.mau.fi/libsignal@v0.2.2  GPL-3.0  https://pkg.go.dev/go.mau.fi/libsignal
+go.mau.fi/util@v0.11.0  MPL-2.0  https://pkg.go.dev/go.mau.fi/util
+go.mau.fi/whatsmeow@v0.0.0-20261110152934-c88388f983b4  MPL-2.0  https://pkg.go.dev/go.mau.fi/whatsmeow
+golang.org/x/crypto@v0.58.0  BSD-style  https://pkg.go.dev/golang.org/x/crypto
+golang.org/x/exp@v0.0.0-20261014143641-f0251eb4aa3e  BSD-style  https://pkg.go.dev/golang.org/x/exp
+golang.org/x/net@v0.61.0  BSD-style  https://pkg.go.dev/golang.org/x/net
+golang.org/x/oauth2@v0.35.0  BSD-style  https://pkg.go.dev/golang.org/x/oauth2
+golang.org/x/sync@v0.24.0  BSD-style  https://pkg.go.dev/golang.org/x/sync
+golang.org/x/sys@v0.49.0  BSD-style  https://pkg.go.dev/golang.org/x/sys
+golang.org/x/text@v0.43.0  BSD-style  https://pkg.go.dev/golang.org/x/text
+golang.org/x/time@v0.15.0  BSD-style  https://pkg.go.dev/golang.org/x/time
+google.golang.org/protobuf@v1.36.12  BSD-style  https://pkg.go.dev/google.golang.org/protobuf
+modernc.org/libc@v1.80.1  BSD-style  https://pkg.go.dev/modernc.org/libc
+modernc.org/mathutil@v1.7.1  BSD-style  https://pkg.go.dev/modernc.org/mathutil
+modernc.org/memory@v1.12.1  BSD-style  https://pkg.go.dev/modernc.org/memory
+modernc.org/sqlite@v1.62.0  BSD-style  https://pkg.go.dev/modernc.org/sqlite
