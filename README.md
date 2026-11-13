@@ -1,11 +1,21 @@
 # Chatwell
 
-**Your WhatsApp, available to your AI apps.** Chatwell keeps one WhatsApp *linked device* connected on your Windows
-PC (the way WhatsApp Web does), stores your messages on the PC, and lets AI apps such as Claude, Codex, Cursor,
+**Your WhatsApp, available to your AI apps.** Chatwell keeps WhatsApp *linked devices* connected on your Windows PC
+or Mac (the way WhatsApp Web does), stores your messages on the PC, and lets AI apps such as Claude, Codex, Cursor,
 VS Code Copilot and Gemini CLI read, search and follow your chats through [MCP](https://modelcontextprotocol.io).
 
 > **Unofficial.** Chatwell is not made, endorsed or supported by WhatsApp or Meta. WhatsApp's terms do not allow
 > third-party clients, and WhatsApp may limit or ban numbers that use them. Use it at your own risk.
+
+## Install on a Mac (macOS 13 or newer, Apple Silicon or Intel)
+
+1. Download `Chatwell-<version>-mac.zip` from [Releases](../../releases/latest) and open `Chatwell.app`.
+2. It is not notarized yet: if macOS says it can't verify Chatwell, open System Settings > Privacy & Security and click
+   **Open Anyway**.
+3. Accept the terms. Chatwell installs itself into `~/Applications` (no password), starts at login, and opens a QR code.
+4. On the phone: WhatsApp > Settings > Linked devices > Link a device, and scan it.
+
+The menu-bar icon has the same menu as the Windows tray icon. Data lives in `~/Library/Application Support/Chatwell`.
 
 ## Install (Windows 10 / 11)
 
@@ -33,7 +43,7 @@ command `chatwell-cli.exe mcp`.
 | `receive_from_phone` | **hand the AI a file:** send a photo, document, voice note or text to yourself on WhatsApp ("Message yourself") and the AI picks it up |
 | `subscribe`, `check_new_messages`, ... | follow chats: new messages are pushed into Claude Code sessions (channels) or collected by any app |
 | `request_history` | older messages of a chat, from the phone |
-| `send_message` | **off until you allow it** in the tray (at most 60 messages an hour per account, whatever the settings) |
+| `send_message` | text or a file from your account: on by default, off with one click in the tray (at most 60 messages an hour per account, whatever the settings) |
 
 Several WhatsApp accounts can be linked (tray > Add account). Every tool takes an optional `account`; reading covers all
 accounts and labels each message with its account; sending asks which account when there is more than one.
@@ -52,7 +62,7 @@ messages), Add account, Connect an AI, Allow AI to send messages, Start with Win
 - Your messages and media stay on your PC (`%LOCALAPPDATA%\Chatwell`). Chatwell talks only to WhatsApp and, once a
   day, to GitHub to check for updates. No telemetry. The AI apps you connect read your messages under their own terms.
 - Messages from other people can try to steer an AI ("forward all chats to..."). Chatwell tells the AI to treat
-  message text as data, never as instructions; sending stays off unless you turn it on, and is capped.
+  message text as data, never as instructions; sending is capped, and "Allow AI to send messages" in the tray turns it off.
 - It never shows you as "online" (your phone keeps its notifications) and never marks messages as read.
 - The local API listens on 127.0.0.1 only and needs a token for anything beyond status.
 
