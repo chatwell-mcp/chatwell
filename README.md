@@ -20,9 +20,10 @@ Apps > Installed apps; then remove the PC under WhatsApp > Linked devices.
 
 ## Use it from an AI app
 
-Tray icon > **Connect an AI...** shows copy-paste steps for Claude Code, Claude Desktop, OpenAI Codex, Cursor,
-VS Code, Gemini CLI, Windsurf and LM Studio, filled in with the path on your PC. The MCP server is the command
-`chatwell-cli.exe mcp`.
+Tray icon > **Connect an AI...** shows, for Claude Code, Claude Desktop, OpenAI Codex, Cursor, VS Code, Gemini CLI,
+Windsurf and LM Studio, the easiest way in: for the coding agents a sentence you paste into the AI, which then adds
+Chatwell to its own settings; or the steps to do it yourself, filled in with the path on your PC. The MCP server is the
+command `chatwell-cli.exe mcp`.
 
 | Tool | |
 |---|---|
@@ -32,15 +33,19 @@ VS Code, Gemini CLI, Windsurf and LM Studio, filled in with the path on your PC.
 | `receive_from_phone` | **hand the AI a file:** send a photo, document, voice note or text to yourself on WhatsApp ("Message yourself") and the AI picks it up |
 | `subscribe`, `check_new_messages`, ... | follow chats: new messages are pushed into Claude Code sessions (channels) or collected by any app |
 | `request_history` | older messages of a chat, from the phone |
-| `send_message` | **off until you allow it** in the tray (at most 60 messages an hour, whatever the settings) |
+| `send_message` | **off until you allow it** in the tray (at most 60 messages an hour per account, whatever the settings) |
+
+Several WhatsApp accounts can be linked (tray > Add account). Every tool takes an optional `account`; reading covers all
+accounts and labels each message with its account; sending asks which account when there is more than one.
 
 For Claude Code, new messages in subscribed chats can arrive in the session as they happen: start it with
 `claude --dangerously-load-development-channels server:whatsapp` (Claude Code channels are a research preview).
 
 ## The tray icon
 
-Blue = connected, amber = connecting, orange = needs login, grey = paused, red = blocked or needs an update. Menu:
-Log in, Pause / Resume, Connect an AI, Allow AI to send messages, Start with Windows, Check for updates, Quit.
+Blue = connected, amber = connecting, orange = needs login, grey = paused, red = blocked or needs an update (the most
+urgent state of all accounts). Menu: one entry per account (Pause / Resume, Log in again, Log out, Log out and delete its
+messages), Add account, Connect an AI, Allow AI to send messages, Start with Windows, Check for updates, Quit.
 
 ## Privacy and safety
 
