@@ -66,9 +66,23 @@ messages), Add account, Connect an AI, Allow AI to send messages, Start with Win
 - It never shows you as "online" (your phone keeps its notifications) and never marks messages as read.
 - The local API listens on 127.0.0.1 only and needs a token for anything beyond status.
 
+## Building from source
+
+Go 1.27+. `build.ps1` runs the tests and builds `bin\Chatwell.exe` (service, tray) and `bin\chatwell-cli.exe`
+(MCP / command line); with a `data\` folder next to `bin\`, a build keeps its data there ("portable": it never
+installs or updates itself). `install.ps1` registers it to start with Windows. `release.ps1` builds the release zip,
+the source zip and the signed update manifest (maintainers only: it needs the release key).
+
+Command line: `chatwell-cli status | login | setup | autostart [on|off|remove] | uninstall | version`.
+
+Data folder: `session.db` (the linked-device keys: whoever has it can read and send as you), `messages.db` (chats,
+contacts, messages, full-text index), `media\`, `config.json` (port 47123, `autoDownload` chats whose photos are saved
+as they arrive, `autoDownloadDays`, `allowSend`, `sendsPerHour`, `autoUpdate`), `logs\`.
+
+Built on [whatsmeow](https://github.com/tulir/whatsmeow) (MPL-2.0), an open-source implementation of the WhatsApp
+Web protocol, and the [MCP Go SDK](https://github.com/modelcontextprotocol/go-sdk).
+
 ## License
 
 GPL-3.0 (see [LICENSE](LICENSE)). Each release includes its source code (`Chatwell-<version>-source.zip`).
-Built on [whatsmeow](https://github.com/tulir/whatsmeow) (MPL-2.0) and the
-[MCP Go SDK](https://github.com/modelcontextprotocol/go-sdk).
 Third-party licenses: [THIRD_PARTY_NOTICES.txt](THIRD_PARTY_NOTICES.txt).
